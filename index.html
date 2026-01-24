@@ -24,11 +24,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                 </label>
 
-                <a id="home-link" href="#">Projects</a> 
-                <a href="#">About</a> 
-                <a href="#">Resume</a>
-                <a href="#">Skills</a>
-                <a href="#">Contact</a>
+                <a id="home-link" href="#projects-page">Projects</a> 
+                <a href="#about">About</a> 
+                <a href="https://drive.google.com/file/d/1hae5IiesgxDGi0c_n_fSHlbUACqEPCfq/view?usp=drivesdk" target="main">Resume</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact-me">Contact</a>
             </div>
         </nav>
 
@@ -40,27 +40,36 @@
 
     </section>
 
-    <section class="bio-page">
-        <div class="container">
+    <section class="bio-page" >
+        <div class="container" id="about">
         <!--About Section-->
         <div class="box"> 
             <div class="img" id="Abt-Image">
-                <img class = "image" src="images/Background-Photo.png" alt="profile_photo">
+                <img class = "image" id="about-profile" src="images/Background-Photo.png" alt="profile_photo">
             </div>
             <div class="info">
                 <h1 class="heading">About</h1>
                 <br>
                 <p>
-                    
-                    Hi, I'm Adi - a tech enthusiast passionate about diving deep into machine learning,
-                    immersive tech, and IoT.
-                    <br><br>
-                    Currently pursuing a CS and Math degree at Ashoka University, 
-                    I sharpen my ML skills through coursework while carving out time 
-                    in my free hours for web development, hands-on ML projects, and 
-                    logic-building challenges like DSA. These areas light a fire in me.
+                Hi, I’m Adi — a Computer Science & Mathematics undergraduate at Ashoka University,
+                with a growing focus on building intelligent systems that turn data into real-world
+                decisions.
 
+                <br><br>
+
+                I primarily work toward becoming an <strong>ML Engineer</strong>, with hands-on experience
+                in Python-based machine learning, data pipelines, and model-centric thinking.
+                Alongside this, I actively use <strong>web development</strong> as a tool to design clean,
+                interactive interfaces for the systems I build.
+
+                <br><br>
+
+                I enjoy working on projects that sit at the intersection of software engineering
+                and machine learning — especially problems involving real-time inference,
+                system reliability, and explainability. Beyond my core focus, I explore areas
+                like AR/VR and quantum computing out of curiosity and long-term interest.
                 </p>
+
                 <br>
             </div>
         </div>
@@ -156,7 +165,7 @@
         </div>
 
         <h1 class="heading"> Skills</h1>
-        <div class="carousel">
+        <div class="carousel" id="skills">
             <div class="group">
                 <div class="card">
                     <img class="card-img" src="images/python-logo-only.png" alt="image">
@@ -250,7 +259,7 @@
     </section>
 
     <section class="contact">
-         <h1 class="heading"> Contact Me </h1>
+         <h1 class="heading" id="contact-me"> Contact Me </h1>
          <div class="ct-btn">
             <a href="https://www.linkedin.com/in/ft-adithya-rasamolla/" target="main">
                  <i class="fa-brands fa-linkedin"></i>
@@ -271,7 +280,7 @@
          </div>
 
          <footer class="footer">
-            <p>&copy; 2026 Adithya Rasamolla. All rights reserved.</p>
+            <p>&copy; 2026 Built with ❤️ by Adithya. All rights reserved.</p>
         </footer>
     </section>
 

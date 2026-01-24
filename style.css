@@ -77,9 +77,23 @@ nav svg {
   display: none;
 }
 
-.open-sidebar-button,
+/* Default state */
+.open-sidebar-button {
+  display: block;
+}
+
 .close-sidebar-button {
   display: none;
+}
+
+
+/* When sidebar is open */
+#sidebar-active:checked ~ .open-sidebar-button {
+  display: none;
+}
+
+#sidebar-active:checked ~ .links-container .close-sidebar-button {
+  display: block;
 }
 
 /* ===== MAIN PAGE ===== */
@@ -342,6 +356,12 @@ nav svg {
 
 /* ===== MEDIA QUERIES ===== */
 @media (min-width: 768px) {
+
+    /* Hide menu buttons by default (desktop) */
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: none;
+  }
   section {
     min-height: 100%;
   }
@@ -386,6 +406,11 @@ nav svg {
 
   .image{
     height: 350px;
+    width: auto;
+  }
+
+  #about-profile{
+    height: 100%;
     width: auto;
   }
 
@@ -463,6 +488,25 @@ nav svg {
     top: 20px;
   }
 
+    /* Mobile default state */
+  .open-sidebar-button {
+    display: block;
+  }
+
+  .close-sidebar-button {
+    display: none;
+  }
+
+  /* When sidebar is open */
+  #sidebar-active:checked ~ .open-sidebar-button {
+    display: none;
+  }
+
+  #sidebar-active:checked ~ .links-container .close-sidebar-button {
+    display: block;
+  }
+
+
   #sidebar-active:checked ~ .links-container {
     right: 0;
   }
@@ -524,4 +568,12 @@ nav svg {
 
 .projects::-webkit-scrollbar-thumb:hover {
   background: #333;
+}
+
+section{
+  scroll-margin-top: 100px;
+}
+
+html{
+  scroll-behavior: smooth;
 }

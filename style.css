@@ -274,6 +274,18 @@ nav svg {
   align-items: center;
 }
 
+.exp-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 1rem;
+  background-color: #222;
+  width: 96%;
+}
+
 /* ===== SKILLS CAROUSEL ===== */
 .carousel {
   margin: 25px auto;
@@ -291,7 +303,7 @@ nav svg {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  animation: spin 30s linear infinite;
+  animation: spin 10s linear infinite;
   padding: 1em;
 }
 
@@ -412,6 +424,15 @@ nav svg {
   #about-profile{
     height: 100%;
     width: auto;
+  }
+
+  .exp-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
   }
 
   .info {

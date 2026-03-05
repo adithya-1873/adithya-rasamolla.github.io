@@ -32,9 +32,11 @@ body {
 /* ===== NAVBAR ===== */
 nav {
   height: 60px;
+  width: min(90vw, 100%);
+  padding-inline: clamp(0.5rem, 3vw, 2.5rem);
   background-color: var(--color-1);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -45,9 +47,13 @@ nav {
 
 .links-container {
   height: 100%;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
+  margin: 0 auto;
 }
 
 nav a {
@@ -79,7 +85,7 @@ nav svg {
 
 /* Default state */
 .open-sidebar-button {
-  display: block;
+  display: none;
 }
 
 .close-sidebar-button {
@@ -118,6 +124,7 @@ nav svg {
   align-items: center;
   text-align: center;
   margin-top: 60px;
+  gap: 0.75rem;
 }
 
 #bio-name {
@@ -204,7 +211,7 @@ nav svg {
   border-radius: 1rem;
   padding: 0.5rem;
   font-size: 1.25rem;
-  text-align: center;
+  text-align: left;
   margin: 0.5rem;
   background-color: #222;
 }
@@ -225,6 +232,7 @@ nav svg {
   color: #ff4500;
   text-align: center;
   margin-top: 1rem;
+  line-height: 1.2;
 }
 
 /* ===== PROJECTS PAGE ===== */
@@ -485,17 +493,23 @@ nav svg {
   }
 
   nav{
-    width: 100vw;
+    width: 100%;
+    padding-inline: 0.5rem;
   }
+
   .links-container {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+    max-width: none;
+    margin: 0;
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -90%;
     z-index: 10;
-    width: 100%;
+    width: min(85vw, 340px);
     height: 100vh;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
     background-color: var(--color-1);
     box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out;
@@ -527,9 +541,17 @@ nav svg {
 
   }
 
-  h1,h2{
-    align-self: center;
+  h1,
+  h2,
+  h3,
+  p{
+    text-align: center;
+  }
 
+  .info,
+  .exp-info {
+    text-align: center;
+    align-items: center;
   }
 
   nav a {
@@ -595,10 +617,12 @@ nav svg {
 
   #bio-name {
     font-size: clamp(2rem, 10vw, 4rem);
+
   }
 
   #bio-designation {
     font-size: clamp(1rem, 5vw, 1.5rem);
+    max-width: 28ch;
   }
 
   #bio-title {
@@ -620,28 +644,28 @@ nav svg {
   }
 }
 
-.projects::-webkit-scrollbar {
-  height: 8px;
-}
+  .projects::-webkit-scrollbar {
+    height: 8px;
+  }
 
-.projects::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 10px;
-}
+  .projects::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+  }
 
-.projects::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 10px;
-}
+  .projects::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
 
-.projects::-webkit-scrollbar-thumb:hover {
-  background: #333;
-}
+  .projects::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
 
-section{
-  scroll-margin-top: 100px;
-}
+  section{
+    scroll-margin-top: 100px;
+  }
 
-html{
-  scroll-behavior: smooth;
-}
+  html{
+    scroll-behavior: smooth;
+  }
